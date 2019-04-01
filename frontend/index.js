@@ -2,9 +2,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'babel-polyfill';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from 'frontend/components/App';
 
-const App = () => (
-  <span>start</span>
-);
 
 ReactDOM.render(<App />, document.getElementById('root'));

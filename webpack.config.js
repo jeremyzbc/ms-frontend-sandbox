@@ -1,4 +1,5 @@
 const path = require('path');
+const express = require('express');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
@@ -10,10 +11,16 @@ module.exports = {
   },
   mode: process.env.NODE_ENV || 'development',
   resolve: {
-    modules: [path.resolve(__dirname, 'frontend'), 'node_modules']
+    modules: [path.resolve(__dirname, 'frontend'), 'node_modules'],
+    alias: {
+      frontend: path.resolve(__dirname, 'frontend')
+    }
   },
   devServer: {
     contentBase: path.join(__dirname,'frontend'),
+    before: function(app, server) {
+      app.use('data', express.static('/frontend/data'))
+    },
     historyApiFallback: true,
     port: 3333
   },
