@@ -7,8 +7,8 @@
     "test": "jest",
     "webpack": "babel-node ./node_modules/webpack/bin/webpack",
     "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
-    "lint": "eslint ./src --ext .js",
-    "lint:fix": "eslint ./src --ext .js --quiet --fix"
+    "lint": "eslint ./frontend --ext .js",
+    "lint:fix": "eslint ./frontend --ext .js --quiet --fix"
   },
   "jest": {
     "verbose": true,
