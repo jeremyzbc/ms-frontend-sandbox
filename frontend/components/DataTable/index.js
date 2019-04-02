@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import 'whatwg-fetch';
 import DataTableHeader from './DataTableHeader';
 import DataTableBody from './DataTableBody';
 import { compareString, compareNumber, compareDate } from 'frontend/utils';
