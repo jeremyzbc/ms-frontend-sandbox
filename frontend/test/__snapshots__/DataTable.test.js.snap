@@ -1,0 +1,1428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test DataTable component snapshots should match snapshot of data fetched 1`] = `
+<DataTable
+  columns={
+    Array [
+      Object {
+        "heading": "ID",
+        "keyName": "id",
+        "sortable": false,
+        "width": "25%",
+      },
+      Object {
+        "heading": "Name",
+        "keyName": "name",
+        "type": "string",
+        "width": "25%",
+      },
+      Object {
+        "heading": "Score",
+        "keyName": "score",
+        "type": "number",
+        "width": "25%",
+      },
+      Object {
+        "heading": "Date of birth",
+        "keyName": "dob",
+        "type": "date",
+        "width": "25%",
+      },
+    ]
+  }
+  error={false}
+  loading={false}
+  source={
+    Array [
+      Object {
+        "dob": "1990-02-02",
+        "id": 1,
+        "name": "Jack",
+        "score": 200,
+      },
+      Object {
+        "dob": "1980-12-02",
+        "id": 2,
+        "name": "Jack",
+        "score": 200,
+      },
+      Object {
+        "dob": "1996-09-22",
+        "id": 3,
+        "name": "Joe",
+        "score": 100,
+      },
+      Object {
+        "dob": "1990-02-02",
+        "id": 4,
+        "name": "Simon",
+        "score": 400,
+      },
+      Object {
+        "dob": "1988-05-11",
+        "id": 5,
+        "name": "Abraham",
+        "score": 400,
+      },
+    ]
+  }
+>
+  <DataTableHeader
+    columns={
+      Array [
+        Object {
+          "heading": "ID",
+          "keyName": "id",
+          "sortable": false,
+          "width": "25%",
+        },
+        Object {
+          "heading": "Name",
+          "keyName": "name",
+          "type": "string",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Score",
+          "keyName": "score",
+          "type": "number",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Date of birth",
+          "keyName": "dob",
+          "type": "date",
+          "width": "25%",
+        },
+      ]
+    }
+    onChangeSorting={[Function]}
+    sortCriterias={Array []}
+  >
+    <section
+      style={
+        Object {
+          "fontWeight": 500,
+          "padding": "1rem 0",
+        }
+      }
+    >
+      <div
+        className="d-flex"
+      >
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="id"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            ID
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="name"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Name
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="score"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Score
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="dob"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Date of birth
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+      </div>
+    </section>
+  </DataTableHeader>
+  <DataTableBody
+    columns={
+      Array [
+        Object {
+          "heading": "ID",
+          "keyName": "id",
+          "sortable": false,
+          "width": "25%",
+        },
+        Object {
+          "heading": "Name",
+          "keyName": "name",
+          "type": "string",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Score",
+          "keyName": "score",
+          "type": "number",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Date of birth",
+          "keyName": "dob",
+          "type": "date",
+          "width": "25%",
+        },
+      ]
+    }
+    error={false}
+    loading={false}
+    source={
+      Array [
+        Object {
+          "dob": "1990-02-02",
+          "id": 1,
+          "name": "Jack",
+          "score": 200,
+        },
+        Object {
+          "dob": "1980-12-02",
+          "id": 2,
+          "name": "Jack",
+          "score": 200,
+        },
+        Object {
+          "dob": "1996-09-22",
+          "id": 3,
+          "name": "Joe",
+          "score": 100,
+        },
+        Object {
+          "dob": "1990-02-02",
+          "id": 4,
+          "name": "Simon",
+          "score": 400,
+        },
+        Object {
+          "dob": "1988-05-11",
+          "id": 5,
+          "name": "Abraham",
+          "score": 400,
+        },
+      ]
+    }
+  >
+    <section>
+      <div
+        className="d-flex"
+        key="0"
+        style={
+          Object {
+            "padding": "1rem 0",
+          }
+        }
+      >
+        <span
+          key="id"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          1
+        </span>
+        <span
+          key="name"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          Jack
+        </span>
+        <span
+          key="score"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          200
+        </span>
+        <span
+          key="dob"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          1990-02-02
+        </span>
+      </div>
+      <div
+        className="d-flex"
+        key="1"
+        style={
+          Object {
+            "padding": "1rem 0",
+          }
+        }
+      >
+        <span
+          key="id"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          2
+        </span>
+        <span
+          key="name"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          Jack
+        </span>
+        <span
+          key="score"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          200
+        </span>
+        <span
+          key="dob"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          1980-12-02
+        </span>
+      </div>
+      <div
+        className="d-flex"
+        key="2"
+        style={
+          Object {
+            "padding": "1rem 0",
+          }
+        }
+      >
+        <span
+          key="id"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          3
+        </span>
+        <span
+          key="name"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          Joe
+        </span>
+        <span
+          key="score"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          100
+        </span>
+        <span
+          key="dob"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          1996-09-22
+        </span>
+      </div>
+      <div
+        className="d-flex"
+        key="3"
+        style={
+          Object {
+            "padding": "1rem 0",
+          }
+        }
+      >
+        <span
+          key="id"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          4
+        </span>
+        <span
+          key="name"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          Simon
+        </span>
+        <span
+          key="score"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          400
+        </span>
+        <span
+          key="dob"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          1990-02-02
+        </span>
+      </div>
+      <div
+        className="d-flex"
+        key="4"
+        style={
+          Object {
+            "padding": "1rem 0",
+          }
+        }
+      >
+        <span
+          key="id"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          5
+        </span>
+        <span
+          key="name"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          Abraham
+        </span>
+        <span
+          key="score"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          400
+        </span>
+        <span
+          key="dob"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          1988-05-11
+        </span>
+      </div>
+    </section>
+  </DataTableBody>
+</DataTable>
+`;
+
+exports[`Test DataTable component snapshots should match snapshot of error 1`] = `
+<DataTable
+  columns={
+    Array [
+      Object {
+        "heading": "ID",
+        "keyName": "id",
+        "sortable": false,
+        "width": "25%",
+      },
+      Object {
+        "heading": "Name",
+        "keyName": "name",
+        "type": "string",
+        "width": "25%",
+      },
+      Object {
+        "heading": "Score",
+        "keyName": "score",
+        "type": "number",
+        "width": "25%",
+      },
+      Object {
+        "heading": "Date of birth",
+        "keyName": "dob",
+        "type": "date",
+        "width": "25%",
+      },
+    ]
+  }
+  error={true}
+  loading={false}
+  source={
+    Array [
+      Object {
+        "dob": "1990-02-02",
+        "id": 1,
+        "name": "Jack",
+        "score": 200,
+      },
+      Object {
+        "dob": "1980-12-02",
+        "id": 2,
+        "name": "Jack",
+        "score": 200,
+      },
+      Object {
+        "dob": "1996-09-22",
+        "id": 3,
+        "name": "Joe",
+        "score": 100,
+      },
+      Object {
+        "dob": "1990-02-02",
+        "id": 4,
+        "name": "Simon",
+        "score": 400,
+      },
+      Object {
+        "dob": "1988-05-11",
+        "id": 5,
+        "name": "Abraham",
+        "score": 400,
+      },
+    ]
+  }
+>
+  <DataTableHeader
+    columns={
+      Array [
+        Object {
+          "heading": "ID",
+          "keyName": "id",
+          "sortable": false,
+          "width": "25%",
+        },
+        Object {
+          "heading": "Name",
+          "keyName": "name",
+          "type": "string",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Score",
+          "keyName": "score",
+          "type": "number",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Date of birth",
+          "keyName": "dob",
+          "type": "date",
+          "width": "25%",
+        },
+      ]
+    }
+    onChangeSorting={[Function]}
+    sortCriterias={Array []}
+  >
+    <section
+      style={
+        Object {
+          "fontWeight": 500,
+          "padding": "1rem 0",
+        }
+      }
+    >
+      <div
+        className="d-flex"
+      >
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="id"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            ID
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="name"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Name
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="score"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Score
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="dob"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Date of birth
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+      </div>
+    </section>
+  </DataTableHeader>
+  <DataTableBody
+    columns={
+      Array [
+        Object {
+          "heading": "ID",
+          "keyName": "id",
+          "sortable": false,
+          "width": "25%",
+        },
+        Object {
+          "heading": "Name",
+          "keyName": "name",
+          "type": "string",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Score",
+          "keyName": "score",
+          "type": "number",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Date of birth",
+          "keyName": "dob",
+          "type": "date",
+          "width": "25%",
+        },
+      ]
+    }
+    error={true}
+    loading={false}
+    source={
+      Array [
+        Object {
+          "dob": "1990-02-02",
+          "id": 1,
+          "name": "Jack",
+          "score": 200,
+        },
+        Object {
+          "dob": "1980-12-02",
+          "id": 2,
+          "name": "Jack",
+          "score": 200,
+        },
+        Object {
+          "dob": "1996-09-22",
+          "id": 3,
+          "name": "Joe",
+          "score": 100,
+        },
+        Object {
+          "dob": "1990-02-02",
+          "id": 4,
+          "name": "Simon",
+          "score": 400,
+        },
+        Object {
+          "dob": "1988-05-11",
+          "id": 5,
+          "name": "Abraham",
+          "score": 400,
+        },
+      ]
+    }
+  >
+    <h5>
+      Oops, something went wrong...
+    </h5>
+  </DataTableBody>
+</DataTable>
+`;
+
+exports[`Test DataTable component snapshots should match snapshot of loading 1`] = `
+<DataTable
+  columns={
+    Array [
+      Object {
+        "heading": "ID",
+        "keyName": "id",
+        "sortable": false,
+        "width": "25%",
+      },
+      Object {
+        "heading": "Name",
+        "keyName": "name",
+        "type": "string",
+        "width": "25%",
+      },
+      Object {
+        "heading": "Score",
+        "keyName": "score",
+        "type": "number",
+        "width": "25%",
+      },
+      Object {
+        "heading": "Date of birth",
+        "keyName": "dob",
+        "type": "date",
+        "width": "25%",
+      },
+    ]
+  }
+  error={false}
+  loading={true}
+  source={
+    Array [
+      Object {
+        "dob": "1990-02-02",
+        "id": 1,
+        "name": "Jack",
+        "score": 200,
+      },
+      Object {
+        "dob": "1980-12-02",
+        "id": 2,
+        "name": "Jack",
+        "score": 200,
+      },
+      Object {
+        "dob": "1996-09-22",
+        "id": 3,
+        "name": "Joe",
+        "score": 100,
+      },
+      Object {
+        "dob": "1990-02-02",
+        "id": 4,
+        "name": "Simon",
+        "score": 400,
+      },
+      Object {
+        "dob": "1988-05-11",
+        "id": 5,
+        "name": "Abraham",
+        "score": 400,
+      },
+    ]
+  }
+>
+  <DataTableHeader
+    columns={
+      Array [
+        Object {
+          "heading": "ID",
+          "keyName": "id",
+          "sortable": false,
+          "width": "25%",
+        },
+        Object {
+          "heading": "Name",
+          "keyName": "name",
+          "type": "string",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Score",
+          "keyName": "score",
+          "type": "number",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Date of birth",
+          "keyName": "dob",
+          "type": "date",
+          "width": "25%",
+        },
+      ]
+    }
+    onChangeSorting={[Function]}
+    sortCriterias={Array []}
+  >
+    <section
+      style={
+        Object {
+          "fontWeight": 500,
+          "padding": "1rem 0",
+        }
+      }
+    >
+      <div
+        className="d-flex"
+      >
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="id"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            ID
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="name"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Name
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="score"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Score
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+        <span
+          className="d-flex justify-content-between align-items-center"
+          key="dob"
+          style={
+            Object {
+              "padding": "0 .5rem",
+              "width": "25%",
+            }
+          }
+        >
+          <span>
+            Date of birth
+          </span>
+          <span
+            className="d-inline-flex flex-column"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ArrowUpIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+                />
+              </svg>
+            </ArrowUpIcon>
+            <ArrowDownIcon
+              opacity={0.5}
+            >
+              <svg
+                height="16"
+                style={
+                  Object {
+                    "opacity": 0.5,
+                  }
+                }
+                viewBox="0 0 1792 1792"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+                />
+              </svg>
+            </ArrowDownIcon>
+          </span>
+        </span>
+      </div>
+    </section>
+  </DataTableHeader>
+  <DataTableBody
+    columns={
+      Array [
+        Object {
+          "heading": "ID",
+          "keyName": "id",
+          "sortable": false,
+          "width": "25%",
+        },
+        Object {
+          "heading": "Name",
+          "keyName": "name",
+          "type": "string",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Score",
+          "keyName": "score",
+          "type": "number",
+          "width": "25%",
+        },
+        Object {
+          "heading": "Date of birth",
+          "keyName": "dob",
+          "type": "date",
+          "width": "25%",
+        },
+      ]
+    }
+    error={false}
+    loading={true}
+    source={
+      Array [
+        Object {
+          "dob": "1990-02-02",
+          "id": 1,
+          "name": "Jack",
+          "score": 200,
+        },
+        Object {
+          "dob": "1980-12-02",
+          "id": 2,
+          "name": "Jack",
+          "score": 200,
+        },
+        Object {
+          "dob": "1996-09-22",
+          "id": 3,
+          "name": "Joe",
+          "score": 100,
+        },
+        Object {
+          "dob": "1990-02-02",
+          "id": 4,
+          "name": "Simon",
+          "score": 400,
+        },
+        Object {
+          "dob": "1988-05-11",
+          "id": 5,
+          "name": "Abraham",
+          "score": 400,
+        },
+      ]
+    }
+  >
+    <h5>
+      Loading...
+    </h5>
+  </DataTableBody>
+</DataTable>
+`;

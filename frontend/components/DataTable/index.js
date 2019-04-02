@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+import 'whatwg-fetch';
 import DataTableHeader from './DataTableHeader';
 import DataTableBody from './DataTableBody';
 import { compareString, compareNumber, compareDate } from 'frontend/utils';
@@ -8,45 +8,31 @@ import { compareString, compareNumber, compareDate } from 'frontend/utils';
 export default class DataTable extends Component {
   constructor(props) {
     super(props);
+    const { source, loading, error } = props;
     this.state = {
-      source: props.source || [],
-      loading: true,
-      error: false,
+      source: source || [],
+      loading: loading,
+      error: error,
       sortCriterias: []
     };
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
+    let newState = {};
     if (
       nextProps.source &&
       JSON.stringify(nextProps.source) !== JSON.stringify(prevState.source)
     ) {
-      return {
-        source: nextProps.source
-      };
+      newState.source = nextProps.source;
     }
+    if (nextProps.loading !== prevState.loading) {
+      newState.loading = nextProps.loading;
+    }
+    if (nextProps.error !== prevState.error) {
+      newState.error = nextProps.error;
+    }
+    if (Object.keys(newState).length) return newState;
     return null;
-  }
-
-  async componentDidMount() {
-    try {
-      // either provide source in parent component or fetch sourceUrl in Datatable component
-      let { sourceUrl, source } = this.props;
-      if (!source) {
-        const { data } = await axios.get(sourceUrl);
-        source = data;
-      }
-      this.setState({
-        source,
-        loading: false
-      });
-    } catch (error) {
-      console.warn(error);
-      this.setState({
-        loading: false,
-        error: true
-      });
-    }
   }
 
   onChangeSorting = (event, keyName, dataType) => {
@@ -64,17 +50,15 @@ export default class DataTable extends Component {
           return false;
         }
       }
-      // if ctrl key is pressed, keep other sort criterias, or remove them
+      // if ctrl key is pressed while clicking, keep other sort criterias, or remove them
       if (event.ctrlKey) return true;
       return false;
     });
 
-    // first click - unshift criteria to array
+    // first click - add new criteria to array
     if (!find) {
       sortCriterias.unshift({ keyName, dataType, isAscOrder: true });
     }
-
-    console.log(sortCriterias);
 
     this.setState({ sortCriterias });
   };
@@ -82,28 +66,34 @@ export default class DataTable extends Component {
   getSortedSource = () => {
     const { sortCriterias, source } = this.state;
 
-    const sorting = (data, criterias) => {
+    const sorting = (source, criterias) => {
+      // deep clone
+      let data = JSON.parse(JSON.stringify(source));
       criterias.forEach(criteria => {
-        data = data.sort((firstElement, secondElement) => {
+        data = data.sort((firstRow, secondRow) => {
           switch (criteria.dataType) {
             case 'string':
               return compareString(
-                firstElement[criteria.keyName],
-                secondElement[criteria.keyName],
+                firstRow[criteria.keyName],
+                secondRow[criteria.keyName],
                 criteria.isAscOrder
               );
             case 'number':
               return compareNumber(
-                firstElement[criteria.keyName],
-                secondElement[criteria.keyName],
+                firstRow[criteria.keyName],
+                secondRow[criteria.keyName],
                 criteria.isAscOrder
               );
             case 'date':
-            // return compareDate(firstElement[criteria.keyName], secondElement[criteria.keyName], criteria.isAscOrder);
+              return compareDate(
+                firstRow[criteria.keyName],
+                secondRow[criteria.keyName],
+                criteria.isAscOrder
+              );
             default:
               return compareString(
-                firstElement[criteria.keyName],
-                secondElement[criteria.keyName],
+                firstRow[criteria.keyName],
+                secondRow[criteria.keyName],
                 criteria.isAscOrder
               );
           }
@@ -111,18 +101,17 @@ export default class DataTable extends Component {
       });
       return data;
     };
-
     return sorting(source, sortCriterias);
   };
 
   render() {
     const { columns } = this.props;
-    const { loading, error } = this.state;
-    console.log(loading);
+    const { loading, error, sortCriterias } = this.state;
     return (
       <>
         <DataTableHeader
           columns={columns}
+          sortCriterias={sortCriterias}
           onChangeSorting={this.onChangeSorting}
         />
         <DataTableBody
@@ -137,7 +126,8 @@ export default class DataTable extends Component {
 }
 
 DataTable.propTypes = {
-  sourceUrl: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
   source: PropTypes.arrayOf(PropTypes.object),
   columns: PropTypes.arrayOf(
     PropTypes.shape({

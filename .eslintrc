@@ -19,7 +19,7 @@
     "jsx-a11y/html-has-lang": "off",
     "jsx-a11y/label-has-for": "off",
     "react/react-in-jsx-scope": "off",
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": ["error", "windows"],
     "import/prefer-default-export": "off",
     "import/no-named-as-default": "off"
   }

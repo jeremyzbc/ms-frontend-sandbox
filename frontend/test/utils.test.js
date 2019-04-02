@@ -1,4 +1,4 @@
-import { compareString, compareNumber, compareDate } from './index';
+import { compareString, compareNumber, compareDate } from 'frontend/utils';
 
 const ASC_ORDER = true;
 const DESC_ORDER = false;
@@ -13,20 +13,20 @@ describe('Test compareString function', () => {
   });
 
   it('Should return 1 if second element is not a string', () => {
-    expect(compareString(first, null, ASC_ORDER)).toBe(1);
-    expect(compareString(first, null, DESC_ORDER)).toBe(1);
+    expect(compareString(first, null, ASC_ORDER)).toBe(-1);
+    expect(compareString(first, null, DESC_ORDER)).toBe(-1);
   });
 
   it('Should return -1 if first element is not a string', () => {
-    expect(compareString(null, second, ASC_ORDER)).toBe(-1);
-    expect(compareString(null, second, DESC_ORDER)).toBe(-1);
+    expect(compareString(null, second, ASC_ORDER)).toBe(1);
+    expect(compareString(null, second, DESC_ORDER)).toBe(1);
   });
 
   it('Should return correct value', () => {
-    expect(compareString(first, third, ASC_ORDER)).toBe(-1);
-    expect(compareString(third, first, ASC_ORDER)).toBe(1);
-    expect(compareString(first, third, DESC_ORDER)).toBe(1);
-    expect(compareString(third, first, DESC_ORDER)).toBe(-1);
+    expect(compareString(first, third, ASC_ORDER)).toBe(1);
+    expect(compareString(third, first, ASC_ORDER)).toBe(-1);
+    expect(compareString(first, third, DESC_ORDER)).toBe(-1);
+    expect(compareString(third, first, DESC_ORDER)).toBe(1);
   });
 });
 
@@ -67,19 +67,19 @@ describe('Test compareDate function', () => {
   });
 
   it('Should return 1 if second element is not a date', () => {
-    expect(compareDate(first, '', ASC_ORDER)).toBe(1);
-    expect(compareDate(first, '', DESC_ORDER)).toBe(1);
+    expect(compareDate(first, '', ASC_ORDER)).toBe(-1);
+    expect(compareDate(first, '', DESC_ORDER)).toBe(-1);
   });
 
   it('Should return -1 if first element is not a date', () => {
-    expect(compareDate('', second, ASC_ORDER)).toBe(-1);
-    expect(compareDate('', second, DESC_ORDER)).toBe(-1);
+    expect(compareDate('', second, ASC_ORDER)).toBe(1);
+    expect(compareDate('', second, DESC_ORDER)).toBe(1);
   });
 
   it('Should return correct value', () => {
-    expect(compareDate(first, third, ASC_ORDER)).toBe(1);
-    expect(compareDate(third, first, ASC_ORDER)).toBe(-1);
-    expect(compareDate(first, third, DESC_ORDER)).toBe(-1);
-    expect(compareDate(third, first, DESC_ORDER)).toBe(1);
+    expect(compareDate(first, third, ASC_ORDER)).toBe(-1);
+    expect(compareDate(third, first, ASC_ORDER)).toBe(1);
+    expect(compareDate(first, third, DESC_ORDER)).toBe(1);
+    expect(compareDate(third, first, DESC_ORDER)).toBe(-1);
   });
 });

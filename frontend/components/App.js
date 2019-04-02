@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DataTable from './DataTable';
 
 const columns = [
@@ -35,15 +35,51 @@ const columns = [
   }
 ];
 
-export default () => (
-  <div className="container">
-    <h4
-      style={{
-        margin: '2rem 0'
-      }}
-    >
-      ReactJS Table Sorting task
-    </h4>
-    <DataTable columns={columns} sourceUrl="data/data.json" />
-  </div>
-);
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      source: [],
+      loading: true,
+      error: false
+    };
+  }
+
+  async componentDidMount() {
+    try {
+      const response = await fetch('data/data.json');
+      const source = await response.json();
+      this.setState({
+        source,
+        loading: false
+      });
+    } catch (error) {
+      console.warn(error);
+      this.setState({
+        loading: false,
+        error: true
+      });
+    }
+  }
+
+  render() {
+    const { source, loading, error } = this.state;
+    return (
+      <div className="container">
+        <h4
+          style={{
+            margin: '2rem 0'
+          }}
+        >
+          ReactJS Table Sorting task
+        </h4>
+        <DataTable
+          columns={columns}
+          source={source}
+          loading={loading}
+          error={error}
+        />
+      </div>
+    );
+  }
+}
