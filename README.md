@@ -1,22 +1,22 @@
 # ReactJS Table Sorting Task #
 
 ## Setup ##
-`npm install`
+`npm install`  
 `npm start` http://localhost:3333/
 
 ## Unit test ##
-`npm test`
-or
-`npm run test:coverage` 
+`npm test`  
+or  
+`npm run test:coverage`   
 Generate a test coverage table.
 
 ## Lint ##
 `npm run lint:fix` 
-Run Eslint and Prettier code formatter. 
-Note: change "linebreak-style": ["error", "windows"] in .eslintrc file to "linebreak-style": ["error", "unix"] if you are on Mac.
+Run Eslint and Prettier code formatter.   
+Note: change "linebreak-style": ["error", "windows"] in .eslintrc file to "linebreak-style": ["error", "unix"] if you are on Mac.  
 
-
-Only used Bootstrap few utility class.
+## Style ##
+Simple CSS, used Bootstrap few utility class.
 
 ## ScreenShots ##
 ![Screenshot1](/screenshots/initial-render.png)
