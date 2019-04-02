@@ -16,7 +16,7 @@ Run Eslint and Prettier code auto-formatter.
 Note: change "linebreak-style": ["error", "windows"] in .eslintrc file to "linebreak-style": ["error", "unix"] if you are on Mac.  
 
 ## Style ##
-Simple CSS, used Bootstrap few utility class.
+Simple CSS, used a few Bootstrap utility classes.
 
 ## ScreenShots ##
 ![Screenshot1](/screenshots/initial-render.png)
