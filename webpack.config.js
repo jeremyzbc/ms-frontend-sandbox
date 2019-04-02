@@ -1,13 +1,14 @@
 const path = require('path');
 const express = require('express');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: path.join(__dirname,'frontend','index.js'),
   output: {
-    path: path.join(__dirname,'build'),
-    filename: 'index.bundle.js'
+    path: path.join(__dirname,'frontend-dist'),
+    filename: 'index.bundle.js',
+    globalObject: `(typeof self !== 'undefined' ? self : this)`
   },
   mode: process.env.NODE_ENV || 'development',
   resolve: {
@@ -37,7 +38,14 @@ module.exports = {
       {
         test: /\.(css|scss)$/,
         use: [
-          "style-loader", // creates style nodes from JS strings
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // you can specify a publicPath here
+              // by default it use publicPath in webpackOptions.output
+              publicPath: path.join(__dirname,'frontend-dist')
+            }
+          },
           "css-loader", // translates CSS into CommonJS
         ]
       },
@@ -50,6 +58,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname,'frontend','index.html')
+    }),
+    new MiniCssExtractPlugin({
+      filename: "bundle.css",
+      chunkFilename: "[id].css"
     })
   ]
 };
