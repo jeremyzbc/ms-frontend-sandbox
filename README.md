@@ -8,11 +8,11 @@
 `npm test`  
 or  
 `npm run test:coverage`   
-Generate a test coverage table.
+Will generate a test coverage table.
 
 ## Lint ##
 `npm run lint:fix` 
-Run Eslint and Prettier code formatter.   
+Run Eslint and Prettier code auto-formatter.   
 Note: change "linebreak-style": ["error", "windows"] in .eslintrc file to "linebreak-style": ["error", "unix"] if you are on Mac.  
 
 ## Style ##
